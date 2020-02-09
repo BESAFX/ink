@@ -42,6 +42,10 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.4.3"
+    "typescript": "~3.4.3",
+    "@stomp/stompjs": "^4.0.7",
+    "@types/stompjs": "^2.3.3",
+    "@types/sockjs-client": "^1.1.0",
+    "sockjs-client": "^1.1.5"
   }
 }

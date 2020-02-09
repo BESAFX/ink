@@ -1,0 +1,3 @@
+exportenumSocketClientState {
+  ATTEMPTING, CONNECTED
+}

@@ -1,24 +1,24 @@
-exportclassContact {
-  private_id:number;
-private _name: string;
-private _nameEn: string;
-private _nickname: string;
-private _shortName: string;
-private _shortNameEn: string;
-private _address: string;
-private _mobile: string;
-private _phone: string;
-private _nationality: string;
-private _identityNumber: string;
-private _identityLocation: string;
-private _photo: string;
+export class Contact {
+    private _id: number;
+    private _name: string;
+    private _nameEn: string;
+    private _nickname: string;
+    private _shortName: string;
+    private _shortNameEn: string;
+    private _address: string;
+    private _mobile: string;
+    private _phone: string;
+    private _nationality: string;
+    private _identityNumber: string;
+    private _identityLocation: string;
+    private _photo: string;
 
 
-/**
-* Getter id
-* @return {number}
-*/
-public get id(): number {
+    /**
+    * Getter id
+    * @return {number}
+    */
+    public get id(): number {
         return this._id;
     }
 

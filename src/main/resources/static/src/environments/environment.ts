@@ -4,7 +4,8 @@
 
 export const environment = {
 production:false,
-api: 'http://localhost:5080/api',
+api: '/api',
+socket: '/live',
 };
 
 /*

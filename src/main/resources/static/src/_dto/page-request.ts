@@ -1,9 +1,9 @@
-exportclassPageRequest {
-  page:number = 0;
-  size:number = 0;
+export class PageRequest {
+  page: number = 0;
+  size: number = 0;
 
   constructor(page: number, size: number) {
-        this.page = page;
-        this.size = size;
-    }
+    this.page = page;
+    this.size = size;
+  }
 }

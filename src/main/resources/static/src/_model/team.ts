@@ -1,15 +1,15 @@
-import{Person}from'./person';
+import { Person } from './person';
 export class Team {
-private _id?: number;
-private _name?: string;
-private _authorities?: string;
-private _persons?: Person[];
+    private _id?: number;
+    private _name?: string;
+    private _authorities?: string;
+    private _persons?: Person[];
 
-/**
-* Getter id
-* @return {number}
-*/
-public get id(): number {
+    /**
+    * Getter id
+    * @return {number}
+    */
+    public get id(): number {
         return this._id;
     }
 
