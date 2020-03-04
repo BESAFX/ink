@@ -52,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
 
                 .antMatchers(HttpMethod.POST, jwtConfig.getUrl()).permitAll()
-                .antMatchers("/dist/**", "/api/**", "/").permitAll()
+                .antMatchers("/dist/**", "/api/**", "/live/**", "/").permitAll()
 
                 .anyRequest().authenticated();
     }

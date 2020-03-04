@@ -3,6 +3,7 @@ package com.besafx.app.ink.controller;
 import com.besafx.app.ink.dao.ContactDao;
 import com.besafx.app.ink.exception.ContactNotFoundException;
 import com.besafx.app.ink.model.Contact;
+import com.besafx.app.ink.ws.NotificationService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.bohnman.squiggly.Squiggly;
 import com.github.bohnman.squiggly.util.SquigglyUtils;
@@ -38,13 +39,18 @@ public class ContactController {
     @Autowired
     private ContactDao contactDao;
 
+    @Autowired
+    private NotificationService notificationService;
+
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     @Transactional
     @PreAuthorize("hasAuthority('ROLE_CONTACT_CREATE')")
-    public Contact post(@RequestBody final Contact contact) {
+    public Contact post(@RequestBody Contact contact) {
+        contact = contactDao.save(contact);
+        notificationService.postContact(contact);
         return SquigglyUtils.objectify(Squiggly.init(new ObjectMapper(), FILTER_JSON),
-                contactDao.save(contact),
+                contact,
                 Contact.class);
     }
 

@@ -23,7 +23,7 @@ export class SocketClientService implements OnDestroy {
   }
 
   constructor() {
-    this.client = over(new SockJS(environment.api));
+    this.client = over(new SockJS(environment.socket));
     this.state = new BehaviorSubject<SocketClientState>(SocketClientState.ATTEMPTING);
     this.client.connect({}, () => {
       this.state.next(SocketClientState.CONNECTED);

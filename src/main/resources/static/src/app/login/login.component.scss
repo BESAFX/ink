@@ -1,0 +1,18 @@
+nb-card {
+    margin: 0;
+    height: calc(100vh - 2 * 2.5rem);
+}
+
+nb-card-body {
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+.auth-block {
+    margin: auto;
+}
+
+nb-layout .layout .layout-container .content .columns nb-layout-column {
+    padding: 2.5rem;
+}
